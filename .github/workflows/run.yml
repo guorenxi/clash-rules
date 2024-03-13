@@ -32,7 +32,7 @@ jobs:
         shell: bash
 
       - name: Checkout the "hidden" branch
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           ref: hidden
 
@@ -110,7 +110,7 @@ jobs:
           cp *.txt ./publish/
 
       - name: Release and upload assets
-        uses: softprops/action-gh-release@v0.1.6
+        uses: softprops/action-gh-release@v2
         with:
           name: ${{ env.RELEASE_NAME }}
           tag_name: ${{ env.TAG_NAME }}
